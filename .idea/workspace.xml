@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2427c392-c9ab-4173-9e9d-7f3d3810a220" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventEmbedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeuralTensorNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/NeuralTensorNetwork.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dCdL2zW09ab3ofC1eeXkpuWVvL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="NLP-EventDrivenStockPrediction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2427c392-c9ab-4173-9e9d-7f3d3810a220" name="Default Changelist" comment="" />
+      <created>1591932949426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591932949426</updated>
+      <workItem from="1591932956389" duration="831000" />
+      <workItem from="1592115813549" duration="1695000" />
+      <workItem from="1592371073090" duration="5697000" />
+      <workItem from="1592380393028" duration="3405000" />
+      <workItem from="1592394879056" duration="119000" />
+      <workItem from="1592395021984" duration="1157000" />
+      <workItem from="1592396213319" duration="29000" />
+      <workItem from="1592396282333" duration="1204000" />
+      <workItem from="1592397519048" duration="4202000" />
+      <workItem from="1592401866550" duration="857000" />
+      <workItem from="1592451251195" duration="4920000" />
+      <workItem from="1592456192924" duration="83000" />
+      <workItem from="1592456296634" duration="779000" />
+      <workItem from="1592459937271" duration="343000" />
+      <workItem from="1592460306784" duration="6620000" />
+      <workItem from="1592467137715" duration="740000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1272" y="-293" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1592396223779">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state x="-1272" y="-293" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592396223779" />
+    <state x="-1451" y="-397" key="SettingsEditor" timestamp="1592397353632">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state x="-1451" y="-397" key="SettingsEditor/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592397353632" />
+    <state width="960" height="540" key="XDebugger.FullValuePopup" timestamp="1592382437612">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state width="960" height="540" key="XDebugger.FullValuePopup/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592382437612" />
+  </component>
+</project>
