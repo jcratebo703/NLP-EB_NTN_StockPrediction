@@ -35,7 +35,7 @@ class DotLayer:
         dx = np.dot(dout, self.W.T)
         self.dW = np.dot(self.x.T, dout)
 
-        return dx
+        return dx, self.dW
 
 
 class TensorDotLayer:
@@ -71,7 +71,7 @@ class TensorDotLayer:
         self.dW = np.delete(dotMatrix, 0, 0)
         # dx = dx[None, :]
 
-        return dx
+        return dx, self.dW
 
 
 class HyperbolicTanLayer:

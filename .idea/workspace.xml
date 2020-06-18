@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2427c392-c9ab-4173-9e9d-7f3d3810a220" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventEmbedding.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NeuralTensorNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/NeuralTensorNetwork.py" afterDir="false" />
@@ -107,7 +106,7 @@
       <workItem from="1592456296634" duration="779000" />
       <workItem from="1592459937271" duration="343000" />
       <workItem from="1592460306784" duration="6620000" />
-      <workItem from="1592467137715" duration="740000" />
+      <workItem from="1592467137715" duration="9815000" />
     </task>
     <servers />
   </component>
