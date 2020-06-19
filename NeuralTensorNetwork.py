@@ -48,7 +48,7 @@ class TensorDotLayer:
         self.x = x
         self.W = W
 
-        dotMatrix = np.zeros(500)
+        dotMatrix = np.zeros(x.shape[1])
 
         for i in range(len(W)):
             dotValue = np.dot(x, W[i])
@@ -59,7 +59,7 @@ class TensorDotLayer:
         return dotMatrix  # 300*500
 
     def backward(self, dout):  # dout: 300*500 (k*d)
-        dotMatrix = np.zeros((500, 500))
+        dotMatrix = np.zeros((dout.shape[1], dout.shape[1]))
 
         for i in range(len(dout)):  # len(dout)=300 (k)
             oneDAry = dout[i][None, :]  # 1*500

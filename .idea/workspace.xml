@@ -58,6 +58,28 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
+    <configuration name="EventEmbedding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NLP-EventDrivenStockPrediction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EventEmbedding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="NLP-EventDrivenStockPrediction" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,6 +102,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.EventEmbedding" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -106,7 +133,13 @@
       <workItem from="1592456296634" duration="779000" />
       <workItem from="1592459937271" duration="343000" />
       <workItem from="1592460306784" duration="6620000" />
-      <workItem from="1592467137715" duration="9815000" />
+      <workItem from="1592467137715" duration="9816000" />
+      <workItem from="1592551898885" duration="3146000" />
+      <workItem from="1592555354516" duration="1257000" />
+      <workItem from="1592557854085" duration="893000" />
+      <workItem from="1592558828116" duration="302000" />
+      <workItem from="1592559344148" duration="2457000" />
+      <workItem from="1592561811041" duration="9442000" />
     </task>
     <servers />
   </component>
@@ -118,6 +151,26 @@
       <screen x="-1920" y="-576" width="1920" height="1080" />
     </state>
     <state x="-1272" y="-293" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592396223779" />
+    <state width="1878" height="462" key="GridCell.Tab.0.bottom" timestamp="1592572745010">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="574" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592569115958" />
+    <state width="1878" height="462" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592572745010" />
+    <state width="1878" height="462" key="GridCell.Tab.0.center" timestamp="1592572745009">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="574" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592569115956" />
+    <state width="1878" height="462" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592572745009" />
+    <state width="1878" height="462" key="GridCell.Tab.0.left" timestamp="1592572745009">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="574" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592569115956" />
+    <state width="1878" height="462" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592572745009" />
+    <state width="1878" height="462" key="GridCell.Tab.0.right" timestamp="1592572745010">
+      <screen x="-1920" y="-576" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="574" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592569115957" />
+    <state width="1878" height="462" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592572745010" />
     <state x="-1451" y="-397" key="SettingsEditor" timestamp="1592397353632">
       <screen x="-1920" y="-576" width="1920" height="1080" />
     </state>
@@ -126,5 +179,8 @@
       <screen x="-1920" y="-576" width="1920" height="1080" />
     </state>
     <state width="960" height="540" key="XDebugger.FullValuePopup/0.0.1440.900/-1920.-576.1920.1080@-1920.-576.1920.1080" timestamp="1592382437612" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NLP_EventDrivenStockPrediction$EventEmbedding.coverage" NAME="EventEmbedding Coverage Results" MODIFIED="1592569115949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -40,7 +40,7 @@ print(O1rAry)
 
 # %% init params
 inputSize = len(O1Ary[0])  # 1 * 500
-tensorSize = 500
+tensorSize = 50
 
 params = {'T1': np.random.rand(tensorSize, inputSize, inputSize) * np.sqrt(2 / tensorSize ** 2),  # d * d * k
           'T2': np.random.rand(tensorSize, inputSize, inputSize) * np.sqrt(2 / tensorSize ** 2),  # d * d * k
@@ -142,26 +142,14 @@ def getEventEmbedding(O1EBAry, PEBAry, O2EBAry, i):
 
 # %%
 
-U, dictR1, dictR2, dictU = getEventEmbedding(O1Ary, PAry, O2Ary, 0)
-Ur, buf1, buf2, buf3 = getEventEmbedding(O1rAry, PAry, O2Ary, 0)
-
-margin = 1 - np.linalg.norm(U - Ur)
-print(f'np.linalg.norm(U-Ur): {np.linalg.norm(U - Ur)}')
-print(f'max(0, margin): {max(0, margin)}')
-
-dout = -2 * (U - Ur)  # L2 norm square
-
-
-# %%
-
-def BackPorpagation(dictR1, dictR2, dictU, dout):
+def BackPorpagation(dictR1, dictR2, dictU, dout, lr=0.00001):
     # U backward
     dPlusb3 = dictU['tanhOneLayer'].backward(dout)
     dPlusW3, db3 = dictU['addTwoLayer'].backward(dPlusb3)
     dDotR2, dW3R1nR2 = dictU['addOneLayer'].backward(dPlusW3)
     dW3, dR1nR2 = dictU['dotThreeLayer'].backward(dW3R1nR2)
     dDotT3, dR2 = dictU['dotTwoLayer'].backward(dDotR2)
-    dR1, DT3 = dictU['dotOneLayer'].backward(dDotT3)
+    dR1, dT3 = dictU['dotOneLayer'].backward(dDotT3)
 
     # R2 backward
     dPlusb2 = dictR2['tanhOneLayer'].backward(dR2)
@@ -169,12 +157,50 @@ def BackPorpagation(dictR1, dictR2, dictU, dout):
     dDotO2, dW2PnO2 = dictR2['addOneLayer'].backward(dPlusW2)
     dW2, dPnO2 = dictR2['dotThreeLayer'].backward(dW2PnO2)
     dDotT2, dO2 = dictR2['dotTwoLayer'].backward(dDotO2)
-    dO1, dT2 = dictR2['dotOneLayer'].backward(dDotT2)
+    dP, dT2 = dictR2['dotOneLayer'].backward(dDotT2)
 
     # R1 backward
-    dPlusb1 = dictR1['tanhOneLayer'].backward(dR1)
+    dPlusb1 = dictR1['tanhOneLayer'].backward(dR1.T)
     dPlusW1, db1 = dictR1['addTwoLayer'].backward(dPlusb1)
     dDotP, dW1O1nP = dictR1['addOneLayer'].backward(dPlusW1)
     dW1, dO1nP = dictR1['dotThreeLayer'].backward(dW1O1nP)
     dDotT1, dP = dictR1['dotTwoLayer'].backward(dDotP)
     dO1, dT1 = dictR1['dotOneLayer'].backward(dDotT1)
+
+    # update
+    params['T1'] -= lr * dT1
+    params['T2'] -= lr * dT2
+    params['T3'] -= lr * dT3
+    params['W1'] -= lr * dW1
+    params['W2'] -= lr * dW2
+    params['W3'] -= lr * dW3
+    params['b1'] -= lr * db1
+    params['b2'] -= lr * db2
+    params['b3'] -= lr * db3
+
+
+# %%
+
+currentIndex = 0
+n = 0
+
+while currentIndex <= len(O1Ary)-1:
+    U, dictR1G, dictR2G, dictUG = getEventEmbedding(O1Ary, PAry, O2Ary, currentIndex)
+    Ur, buf1, buf2, buf3 = getEventEmbedding(O1rAry, PAry, O2Ary, currentIndex)
+    margin = 0.5 - np.linalg.norm(U - Ur)
+    print(f'\nnp.linalg.norm(U-Ur): {np.linalg.norm(U - Ur)}')
+    print(f'max(0, margin): {max(0, margin)}')
+
+    doutG = -0.01 * U  # L2 norm square
+
+    if max(0, margin) > 0 and n < 3:
+        n += 1
+        print(f'\nCurrent Index: {currentIndex}')
+        print(f'N: {n}')
+
+        BackPorpagation(dictR1G, dictR2G, dictUG, doutG, 0.0001)
+
+    else:
+        currentIndex += 1
+        n = 0
+
