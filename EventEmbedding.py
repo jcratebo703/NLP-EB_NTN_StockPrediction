@@ -9,9 +9,9 @@ reload(NTN)
 
 # %% import data
 
-r1 = requests.get('http://120.126.19.107:3000/embed_sub')
-r2 = requests.get('http://120.126.19.107:3000/embed_relation')
-r3 = requests.get('http://120.126.19.107:3000/embed_obj')
+r1 = requests.get('http://120.126.19.107:3000/embed_sub_train')
+r2 = requests.get('http://120.126.19.107:3000/embed_relation_train')
+r3 = requests.get('http://120.126.19.107:3000/embed_obj_train')
 
 print(r1.status_code)  # 200成功
 print(r2.status_code)  # 200成功
@@ -169,13 +169,13 @@ def BackPorpagation(dictR1, dictR2, dictU, dout, lr=0.00001):
 
     # update
     params['T1'] -= lr * dT1
-    params['T2'] -= lr * dT2
+    params['T2'] -= lr * dT2 * 0.001
     params['T3'] -= lr * dT3
     params['W1'] -= lr * dW1
-    params['W2'] -= lr * dW2
+    params['W2'] -= lr * dW2 * 0.001
     params['W3'] -= lr * dW3
     params['b1'] -= lr * db1
-    params['b2'] -= lr * db2
+    params['b2'] -= lr * db2 * 0.001
     params['b3'] -= lr * db3
 
 
@@ -184,7 +184,7 @@ def BackPorpagation(dictR1, dictR2, dictU, dout, lr=0.00001):
 currentIndex = 0
 n = 0
 
-while currentIndex <= len(O1Ary)-1:
+while currentIndex <= len(O1Ary) - 1:
     U, dictR1G, dictR2G, dictUG = getEventEmbedding(O1Ary, PAry, O2Ary, currentIndex)
     Ur, buf1, buf2, buf3 = getEventEmbedding(O1rAry, PAry, O2Ary, currentIndex)
     margin = 0.5 - np.linalg.norm(U - Ur)
@@ -204,3 +204,38 @@ while currentIndex <= len(O1Ary)-1:
         currentIndex += 1
         n = 0
 
+# %% get testing data
+
+r1 = requests.get('http://120.126.19.107:3000/embed_sub_test')
+r2 = requests.get('http://120.126.19.107:3000/embed_relation_test')
+r3 = requests.get('http://120.126.19.107:3000/embed_obj_test')
+
+print(r1.status_code)  # 200成功
+print(r2.status_code)  # 200成功
+print(r3.status_code)  # 200成功
+
+O1Ary = np.array(json.loads(r1.content))  # str 轉乘json
+PAry = np.array(json.loads(r2.content))
+O2Ary = np.array(json.loads(r3.content))
+
+print(f'O1 shape: {O1Ary.shape}')
+print(f'P shape: {PAry.shape}')
+print(f'O2 shape: {O2Ary.shape}')
+
+# %% testing EB to Df
+U, dictR1G, dictR2G, dictUG = getEventEmbedding(O1Ary, PAry, O2Ary, 0)
+EventEmbDf = pd.DataFrame(columns=('E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'E10',
+                                   'E11', 'E12', 'E13', 'E14', 'E15', 'E16', 'E17', 'E18', 'E19', 'E20',
+                                   'E21', 'E22', 'E23', 'E24', 'E25', 'E26', 'E27', 'E28', 'E29', 'E30',
+                                   'E31', 'E32', 'E33', 'E34', 'E35', 'E36', 'E37', 'E38', 'E39', 'E40',
+                                   'E41', 'E42', 'E43', 'E44', 'E45', 'E46', 'E47', 'E48', 'E49', 'E50',
+                                   ))
+
+for i in range(len(O1Ary)):
+    U, dictR1G, dictR2G, dictUG = getEventEmbedding(O1Ary, PAry, O2Ary, i)
+    EventEmbDf.loc[i] = U.flatten()
+
+# %% df to csv
+address = '/Users/caichengyun/Documents/User/CGU/Subject/四下/Big_Data_Analytical_Methods/Final_Project/EventDriven/'
+
+EventEmbDf.to_csv(address+'EventEmbedding.csv')
